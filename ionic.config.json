@@ -1,0 +1,7 @@
+{
+  "name": "systempad-front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
