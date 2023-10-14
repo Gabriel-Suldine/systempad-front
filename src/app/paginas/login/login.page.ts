@@ -22,18 +22,8 @@ export class LoginPage implements OnInit {
     });
     await toast.present();
   }
-
-
-
-  ionViewWillEnter() {
-    this.menu.enable(false);
-  }
-  ionViewDidLeave() {
-    this.menu.enable(true);
-  }
-
   logar(x: string) {
-    if (this.user.usuario == "teste" && this.user.senha == "0000") {
+    if (this.user.usuario == "" && this.user.senha == "") {
       this.nav.navigateForward(x);
     } else {
       this.presentToast('top')
@@ -43,6 +33,12 @@ export class LoginPage implements OnInit {
   }
     cadastrar(x: string) {
       this.nav.navigateForward(x);
+    }
+    ionViewWillEnter() {
+      this.menu.enable(false);
+    }
+    ionViewDidLeave() {
+      this.menu.enable(true);
     }
   ngOnInit() {
   }

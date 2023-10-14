@@ -9,13 +9,15 @@
   <form>
     <ion-img src=""></ion-img>
     <ion-item>
-      <ion-label position="floating"> Usuario </ion-label>
-      <ion-input type="text"[(ngModel)]="user.usuario"></ion-input>
+      <ion-label position="floating" type="usuario"> Usuario </ion-label>
+      <!-- <ion-input type="text" [(ngModel)]="user.usuario"></ion-input> -->
+      <ion-input type="text" ></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Senha</ion-label>
-      <ion-input type="password" [(ngModel)]="user.senha" ></ion-input>
+      <!-- <ion-input type="password" [(ngModel)]="user.senha" ></ion-input> -->
+      <ion-input type="password"  ></ion-input>
     </ion-item>
 
     <ion-button expand="block"  (click)="logar('home')">Acessar</ion-button>
