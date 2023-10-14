@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController, NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-login',
@@ -6,8 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  constructor(public nav: NavController, public menu: MenuController) { }
+  ionViewWillEnter() {
+    this.menu.enable(false);
+  }
+  ionViewDidLeave() {
+    this.menu.enable(true);
+  }
 
-  constructor() { }
+  logar() {
+    this.nav.navigateForward('home');
+  }
+  cadastrar() {
+    this.nav.navigateForward('');
+  }
+
+
 
   ngOnInit() {
   }
