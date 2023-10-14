@@ -1,30 +1,30 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar>    
     <ion-title>SystemPad</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<h1>Home</h1>
-  <ion-list>      
-      <ion-button fill="solid"  expand="block" >
-        <ion-icon slot="start" name="cash-outline"></ion-icon>
-        Venda
-      </ion-button>
-   
-      <ion-button fill="solid"  expand="block" >
-        <ion-icon slot="start" name="person-circle"></ion-icon>
-        Clientes
-      </ion-button>
+  <h1>Home</h1>
+  <ion-list>
+    <ion-button fill="solid" (click)="router('venda')" expand="block">
+      <ion-icon slot="start" name="cash-outline"></ion-icon>
+      Venda
+    </ion-button>
 
-      <ion-button fill="solid"  expand="block" >
-        <ion-icon slot="start" name="cube-outline"></ion-icon>
-        Produtos
-      </ion-button>
+    <ion-button fill="solid" (click)="router('clientes')" expand="block">
+      <ion-icon slot="start" name="person-circle"></ion-icon>
+      Clientes
+    </ion-button>
 
-      <ion-button fill="outline"  expand="block" >
-        <ion-icon slot="start" name="add-circle-outline"></ion-icon>
-        Cadastro
-      </ion-button>      
-   </ion-list>
+    <ion-button fill="solid" (click)="router('produtos')" expand="block">
+      <ion-icon slot="start" name="cube-outline"></ion-icon>
+      Produtos
+    </ion-button>
+
+    <ion-button fill="outline" (click)="router('cadastro')" expand="block">
+      <ion-icon slot="start" name="add-circle-outline"></ion-icon>
+      Cadastro
+    </ion-button>
+  </ion-list>
 </ion-content>
