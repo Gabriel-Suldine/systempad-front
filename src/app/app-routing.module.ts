@@ -17,6 +17,22 @@ const routes: Routes = [
   },  {
     path: 'home',
     loadChildren: () => import('./paginas/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'produtos',
+    loadChildren: () => import('./paginas/produtos/produtos.module').then( m => m.ProdutosPageModule)
+  },
+  {
+    path: 'clientes',
+    loadChildren: () => import('./paginas/clientes/clientes.module').then( m => m.ClientesPageModule)
+  },
+  {
+    path: 'venda',
+    loadChildren: () => import('./paginas/venda/venda.module').then( m => m.VendaPageModule)
+  },
+  {
+    path: 'cadastro',
+    loadChildren: () => import('./paginas/cadastro/cadastro.module').then( m => m.CadastroPageModule)
   }
 
 ];
