@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController, NavController } from '@ionic/angular';
+import { MenuController, NavController, ToastController } from '@ionic/angular';
 
 
 @Component({
@@ -8,7 +8,23 @@ import { MenuController, NavController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  constructor(public nav: NavController, public menu: MenuController) { }
+  public user = {
+    usuario: "",
+    senha: ""
+  }
+
+  constructor(public nav: NavController, public menu: MenuController, private toastController: ToastController) { }
+  async presentToast(position: 'top' | 'middle' | 'bottom') {
+    const toast = await this.toastController.create({
+      message: 'Dados incorreto!',
+      duration: 500,
+      position: position
+    });
+    await toast.present();
+  }
+
+
+
   ionViewWillEnter() {
     this.menu.enable(false);
   }
@@ -16,16 +32,18 @@ export class LoginPage implements OnInit {
     this.menu.enable(true);
   }
 
-  logar() {
-    this.nav.navigateForward('home');
+  logar(x: string) {
+    if (this.user.usuario == "teste" && this.user.senha == "0000") {
+      this.nav.navigateForward(x);
+    } else {
+      this.presentToast('top')
+    }
+  
+
   }
-  cadastrar() {
-    this.nav.navigateForward('');
-  }
-
-
-
+    cadastrar(x: string) {
+      this.nav.navigateForward(x);
+    }
   ngOnInit() {
   }
-
 }
