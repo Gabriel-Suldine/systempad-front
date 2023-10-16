@@ -7,10 +7,10 @@ import { ProdutoDTO } from "src/app/models/ProdutoDTO";
 export class ProdutoService {
 constructor(public http: HttpClient){
 }
-}
-//Iniciando a consulta na API
-//Crie um método findAll() e passe a URL do mapeamento
-function findAll(this: any)  : Observable<ProdutoDTO[]> {
+ findAll()  : Observable<ProdutoDTO[]> {
     return this.http.get<ProdutoDTO[]>(`${API_CONFIG.baseUrl}/produto`);
     }
+}
+
+
     

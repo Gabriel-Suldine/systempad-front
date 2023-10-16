@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProdutoService } from 'src/app/services/domain/produto.service';
 
 @Component({
   selector: 'app-produtos',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutosPage implements OnInit {
 
-  constructor() { }
+  constructor(public produtoService: ProdutoService) { }
+  ionViewDidEnter() {
+    this.produtoService.findAll()
+    .subscribe(response => {
+    console.log(response);
+    }, error => {
+    console.log(error);
+    })
+    }
 
   ngOnInit() {
   }
