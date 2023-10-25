@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: VendaPage
+  },  {
+    path: 'add-venda',
+    loadChildren: () => import('./add-venda/add-venda.module').then( m => m.AddVendaPageModule)
   }
+
 ];
 
 @NgModule({

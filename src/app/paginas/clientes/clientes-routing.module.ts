@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: ClientesPage
+  },  {
+    path: 'add-clientes',
+    loadChildren: () => import('./add-clientes/add-clientes.module').then( m => m.AddClientesPageModule)
   }
+
 ];
 
 @NgModule({
