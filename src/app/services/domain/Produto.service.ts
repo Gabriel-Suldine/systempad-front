@@ -5,11 +5,12 @@ import { API_CONFIG } from "src/app/config/api.config";
 import { ProdutoDTO } from "src/app/models/ProdutoDTO";
 @Injectable()
 export class ProdutoService {
-    constructor(public http: HttpClient) {
-    }
+    constructor(public http: HttpClient) {}
+
     findAll(): Observable<ProdutoDTO[]> {
         return this.http.get<ProdutoDTO[]>(`${API_CONFIG.baseUrl}/produto`);
     }
+
     findById(id: number): Observable<ProdutoDTO> {
         return this.http.get<ProdutoDTO>(
             `${API_CONFIG.baseUrl}/produto/${id}`);
@@ -24,7 +25,7 @@ export class ProdutoService {
     }
 
     update(produto: ProdutoDTO) {
-        return this.http.put(`${API_CONFIG.baseUrl}/produto/${produto.id}`,
+        return this.http.put(`${API_CONFIG.baseUrl}/produto/${produto.idProduto}`,
             produto, {
             observe: 'response',
             responseType: 'text'
