@@ -14,7 +14,8 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./paginas/login/login.module').then( m => m.LoginPageModule)
-  },  {
+  },
+  {
     path: 'home',
     loadChildren: () => import('./paginas/home/home.module').then( m => m.HomePageModule)
   },
@@ -30,10 +31,7 @@ const routes: Routes = [
     path: 'venda',
     loadChildren: () => import('./paginas/venda/venda.module').then( m => m.VendaPageModule)
   },
-  {
-    path: 'cadastro',
-    loadChildren: () => import('./paginas/cadastro/cadastro.module').then( m => m.CadastroPageModule)
-  }
+ 
 
 ];
 
