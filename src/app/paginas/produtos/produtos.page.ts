@@ -18,7 +18,7 @@ export class ProdutosPage implements OnInit {
         next:
           (response) => this.produto = response,
         error:
-          (error) => console.log(error)
+          (error) => console.log(error,"ocorreu um erro")
       });
   }
   addEditProduto(){
