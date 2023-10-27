@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { ProdutoDTO } from 'src/app/models/ProdutoDTO';
+import { ProdutoDTO } from 'src/app/models/produtoDTO';
 import { ProdutoService } from 'src/app/services/domain/produto.service';
 
 @Component({
