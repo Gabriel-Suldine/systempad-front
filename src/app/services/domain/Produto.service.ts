@@ -10,9 +10,9 @@ export class ProdutoService {
     findAll(): Observable<ProdutoDTO[]> {
         return this.http.get<ProdutoDTO[]>(`${API_CONFIG.baseUrl}/produto`);
     }
-    findById(id: number): Observable<ProdutoDTO> {
+    findById(idProduto: number): Observable<ProdutoDTO> {
         return this.http.get<ProdutoDTO>(
-            `${API_CONFIG.baseUrl}/produto/${id}`);
+            `${API_CONFIG.baseUrl}/produto/${idProduto}`);
     }
 
     insert(produto: ProdutoDTO) {

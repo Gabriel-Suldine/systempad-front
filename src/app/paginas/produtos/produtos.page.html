@@ -10,7 +10,7 @@
 <ion-content [fullscreen]="true">
 
   <ion-fab slot="fixed" vertical="top" horizontal="end" [edge]="true">
-    <ion-fab-button routerLink="/add-produtos/-1">
+    <ion-fab-button routerLink="/produtos/add-produtos">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
@@ -28,7 +28,7 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option routerLink="/add-produtos/{{produto.id}}">
+        <ion-item-option routerLink="/produtos/add-produtos/{{produto.id}}">
           <ion-icon slot="start" name="create"></ion-icon>
           Editar
         </ion-item-option>
