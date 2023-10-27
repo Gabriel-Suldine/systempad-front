@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ProdutoDTO } from 'src/app/models/ProdutoDTO';
-import { ProdutoService } from 'src/app/services/domain/Produto.service';
+import { ProdutoService } from 'src/app/services/domain/produto.service';
 
 @Component({
   selector: 'app-produtos',
