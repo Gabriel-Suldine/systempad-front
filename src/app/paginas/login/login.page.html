@@ -1,26 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>SystemPad</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
   <form>
-    <ion-img src=""></ion-img>
+    <ion-img size="small" src="/assets/icon/LogoSystem.png"
+      alt="Logo do Sistema SystemPad"></ion-img>
+
+
     <ion-item>
       <ion-label position="floating" type="usuario"> Usuario </ion-label>
       <!-- <ion-input type="text" [(ngModel)]="user.usuario"></ion-input> -->
-      <ion-input type="text" ></ion-input>
+      <ion-input type="text"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Senha</ion-label>
       <!-- <ion-input type="password" [(ngModel)]="user.senha" ></ion-input> -->
-      <ion-input type="password"  ></ion-input>
+      <ion-input type="password"></ion-input>
     </ion-item>
 
-    <ion-button expand="block"  (click)="logar('home')">Acessar</ion-button>
+    <ion-button expand="block" (click)="logar('home')">Acessar</ion-button>
 
   </form>
 
