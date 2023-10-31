@@ -9,7 +9,7 @@ import { ProdutoService } from 'src/app/services/domain/produto.service';
   styleUrls: ['./produtos.page.scss'],
 })
 export class ProdutosPage implements OnInit {
-  produto!: ProdutoDTO[];
+  produto!: ProdutoDTO[]; 
 
   constructor(public produtoService: ProdutoService, private navController: NavController) { }
   ionViewDidEnter() {
@@ -25,7 +25,7 @@ export class ProdutosPage implements OnInit {
     this.navController.navigateForward('add-produtos');
   }
 
-  excluirEquipamento(id: number){
+  excluirProduto(id: number){
     this.produtoService.delete(id)
                            .subscribe({
                               next: 

@@ -1,8 +1,9 @@
 export interface ClienteDTO {
-    idProduto: number;
+    id: number;
     nome: string;
     CPF: string;
     telefone: string;
     email: string;
     endereco: string;
+    imagem:String;
 }

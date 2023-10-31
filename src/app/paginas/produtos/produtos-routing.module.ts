@@ -7,7 +7,8 @@ const routes: Routes = [
   {
     path: '',
     component: ProdutosPage
-  },  {
+  },
+  {
     path: 'add-produtos',
     loadChildren: () => import('./add-produtos/add-produtos.module').then( m => m.AddProdutosPageModule)
   }
@@ -19,3 +20,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class ProdutosPageRoutingModule {}
+ 

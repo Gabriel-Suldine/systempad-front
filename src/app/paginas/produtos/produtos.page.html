@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button default-href="home"></ion-back-button>
     </ion-buttons>
-    <ion-title>produtos</ion-title>
+    <ion-title>Produtos</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,7 +13,7 @@
     <ion-fab-button routerLink="/produtos/add-produtos">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
-  </ion-fab>
+  </ion-fab> 
 
   <ion-list>
     <ion-item-sliding *ngFor="let produto of produto">
@@ -33,7 +33,7 @@
           <ion-icon slot="start" name="create"></ion-icon>
           Editar
         </ion-item-option>
-        <ion-item-option color="secondary" (click)="excluirEquipamento(produto.idProduto)">
+        <ion-item-option color="secondary" (click)="excluirProduto(produto.idProduto)">
           <ion-icon slot="start" name="trash"></ion-icon>
           Deletar
         </ion-item-option>

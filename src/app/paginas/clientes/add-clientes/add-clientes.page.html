@@ -5,9 +5,44 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">add-clientes</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <form [formGroup]="clienteForm" *ngIf="clienteForm" (ngSubmit)="submit()">
+    <ion-item>
+      <ion-label position="floating">Foto</ion-label>
+      <ion-input formControlName="foto" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input formControlName="nome" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-input formControlName="descricao" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Marca</ion-label>
+      <ion-input formControlName="marca" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Categoria</ion-label>
+      <ion-input formControlName="categoria" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Valor</ion-label>
+      <ion-input formControlName="valor" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Quantidade</ion-label>
+      <ion-input formControlName="quantidade" type="text"></ion-input>
+    </ion-item>
+
+    <ion-button shape="round" expand="block" 
+                padding type="submit" *ngIf="!modoDeEdicao">
+      Cadastrar
+      
+    </ion-button>
+    <ion-button shape="round" expand="block" 
+                padding type="submit" *ngIf="modoDeEdicao">
+      Alterar
+    </ion-button>
+  </form>
 </ion-content>

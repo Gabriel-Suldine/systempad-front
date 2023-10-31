@@ -29,7 +29,7 @@ export class ProdutoService {
             produto, {
             observe: 'response',
             responseType: 'text'
-        });
+        }); 
     }
 
     delete(id: number) {
@@ -37,5 +37,5 @@ export class ProdutoService {
     }
 }
 
-
+ 
 

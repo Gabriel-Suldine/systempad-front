@@ -7,10 +7,15 @@ const routes: Routes = [
   {
     path: '',
     component: ClientesPage
-  },  {
+  },
+  {
     path: 'add-clientes',
     loadChildren: () => import('./add-clientes/add-clientes.module').then( m => m.AddClientesPageModule)
+  },  {
+    path: 'edit-cliente',
+    loadChildren: () => import('./edit-cliente/edit-cliente.module').then( m => m.EditClientePageModule)
   }
+
 
 ];
 
@@ -19,3 +24,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class ClientesPageRoutingModule {}
+ 
