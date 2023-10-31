@@ -4,6 +4,5 @@ export interface ClienteDTO {
     CPF: string;
     telefone: string;
     email: string;
-    endereco: string;
-    imagem:String;
+    endereco: string;   
 }

@@ -10,8 +10,9 @@ import { ClienteService } from 'src/app/services/domain/cliente.service';
   styleUrls: ['./add-clientes.page.scss'],
 })
 export class AddClientesPage implements OnInit {
-  public modoDeEdicao = false;
   
+  public modoDeEdicao = false;
+
   clienteForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder,
@@ -19,12 +20,16 @@ export class AddClientesPage implements OnInit {
     private navController: NavController,
     private route: ActivatedRoute,
     public clienteService: ClienteService) { }
+
+
   submit() {
+
+
     if (!this.modoDeEdicao) {
       this.clienteService.insert(this.clienteForm.value)
         .subscribe(response => {
           this.presentAlert('Sucesso',
-            'O equipamento foi salvo com sucesso',
+            'O Cliente foi salvo com sucesso',
             ['Ok'])
         })
     }
@@ -32,7 +37,7 @@ export class AddClientesPage implements OnInit {
       this.clienteService.update(this.clienteForm.value)
         .subscribe(response => {
           this.presentAlert('Sucesso',
-            'O equipamento foi atualizado com sucesso',
+            'O Cliente foi atualizado com sucesso',
             ['Ok'])
         })
     }
@@ -41,22 +46,30 @@ export class AddClientesPage implements OnInit {
 
   ngOnInit() {
     const id: number = Number(this.route.snapshot.paramMap.get('id'));
-    
-    if(id > 0){
+
+    if (id > 0) {
       this.modoDeEdicao = true;
       this.clienteService.findById(id).subscribe(response => {
         this.clienteForm = this.formBuilder.group({
-          id: [response.id],      
-          nome: [response.nome, Validators.required]
+          id: [response.id],
+          nome: [response.nome, Validators.required],
+          CPF: [response.CPF, Validators.required],
+          telefone: [response.telefone, Validators.required],
+          email: [response.email, Validators.required],
+          endereco: [response.endereco, Validators.required],
         })
       })
     } else {
       this.modoDeEdicao = false;
       this.clienteForm = this.formBuilder.group({
         id,
-        nome: ['', Validators.required]
+        nome: ['', Validators.required],
+        CPF: ['', Validators.required],
+        telefone: ['', Validators.required],
+        email: ['', Validators.required],
+        endereco: ['', Validators.required],
       })
-    }    
+    }
   }
   async presentAlert(header: string,
     message: string, buttons: string[],) {
@@ -75,4 +88,4 @@ export class AddClientesPage implements OnInit {
 
     await alert.present();
 
-}
+    }}
