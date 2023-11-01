@@ -53,7 +53,7 @@ export class AddClientesPage implements OnInit {
         this.clienteForm = this.formBuilder.group({
           id: [response.id],
           nome: [response.nome, Validators.required],
-          CPF: [response.CPF, Validators.required],
+          CPF: [response.cpf, Validators.required],
           telefone: [response.telefone, Validators.required],
           email: [response.email, Validators.required],
           endereco: [response.endereco, Validators.required],
@@ -64,7 +64,7 @@ export class AddClientesPage implements OnInit {
       this.clienteForm = this.formBuilder.group({
         id,
         nome: ['', Validators.required],
-        CPF: ['', Validators.required],
+        cpf: ['', Validators.required],
         telefone: ['', Validators.required],
         email: ['', Validators.required],
         endereco: ['', Validators.required],
