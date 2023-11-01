@@ -18,4 +18,4 @@ import { AddClientesPage } from './add-clientes.page';
   ],
   declarations: [AddClientesPage]
 })
-export class AddClientesPageModule {}
+export class AddClientesPageModule {} 

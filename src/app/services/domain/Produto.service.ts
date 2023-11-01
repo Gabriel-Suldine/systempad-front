@@ -25,7 +25,7 @@ export class ProdutoService {
     }
 
     update(produto: ProdutoDTO) {
-        return this.http.put(`${API_CONFIG.baseUrl}/produto/${produto.idProduto}`,
+        return this.http.put(`${API_CONFIG.baseUrl}/produto/${produto.id}`,
             produto, {
             observe: 'response',
             responseType: 'text'
