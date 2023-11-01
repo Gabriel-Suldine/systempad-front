@@ -52,9 +52,9 @@ export class AddClientesPage implements OnInit {
       this.clienteService.findById(id).subscribe(response => {
         this.clienteForm = this.formBuilder.group({
           id: [response.id],
-          nome: [response.nome, Validators.required],
-          CPF: [response.cpf, Validators.required],
-          telefone: [response.telefone, Validators.required],
+          nome: [response.nome,Validators.required],
+          cpf: [response.cpf],//validator não deixa salvar , Validators.required
+          telefone: [response.telefone],//validator não deixa salvar , Validators.required
           email: [response.email, Validators.required],
           endereco: [response.endereco, Validators.required],
         })
