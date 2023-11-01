@@ -15,7 +15,7 @@ import { AddClientesPage } from './paginas/clientes/add-clientes/add-clientes.pa
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },ProdutoService, ClienteService,AppComponent,],
   bootstrap: [AppComponent],
 })
