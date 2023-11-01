@@ -4,5 +4,5 @@ export interface AtendenteDTO {
     cpf: string;
     telefone: String;
     email: String;
-    endereco: String;
+
 }

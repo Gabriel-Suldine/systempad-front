@@ -18,15 +18,21 @@
   <ion-list>
     <ion-item-sliding *ngFor="let cliente of cliente">
       <ion-item>
+
+        <div class="cardCliente">
+          <div class="imgCliente">
         <ion-thumbnail slot="start" class="thumb">
-        
+            <img src="{{cliente.imagem}}">
         </ion-thumbnail>
+          </div>
+        
         <ion-label>
-          <p>{{cliente.id}}</p>
-          <h2>{{cliente.nome}}</h2>
-          <p>{{cliente.telefone}}</p>
-          <p>{{cliente.cpf}}</p>
+          <h2>Nome: {{cliente.nome}}</h2>
+          <p>CPF: {{cliente.cpf}}</p>
+          <p>Telefone: {{cliente.telefone}}</p>
+          <p>Código: {{cliente.id}}</p>
         </ion-label>
+      </div>
       </ion-item>
 
       <ion-item-options side="end">
