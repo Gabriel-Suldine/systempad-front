@@ -5,9 +5,31 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">add-atendentes</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <form [formGroup]="atendenteForm" *ngIf="atendenteForm" (ngSubmit)="submit()">    
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input formControlName="nome" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">CPF</ion-label>
+      <ion-input formControlName="cpf" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Telefone</ion-label>
+      <ion-input formControlName="telefone" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-button shape="round" expand="block" 
+                padding type="submit" *ngIf="!modoDeEdicao">
+      Cadastrar      
+    </ion-button>
+    <ion-button shape="round" expand="block" 
+                padding type="submit" *ngIf="modoDeEdicao">
+      Alterar
+    </ion-button>
+  </form>
 </ion-content>
