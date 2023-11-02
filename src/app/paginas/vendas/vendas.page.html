@@ -5,9 +5,36 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">vendas</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+  <ion-fab slot="fixed" vertical="top" horizontal="end" [edge]="true">
+    <ion-fab-button routerLink="/vendas/add-vendas">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> 
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let venda of venda">
+      <ion-item>       
+        <ion-label>
+          <p>{{venda.id}}</p>        
+          <p>{{venda.preco}}</p>
+          <p>{{venda.pagamento}}</p>
+          <p>Atendente:{{venda.atendente.nome}}</p>
+          <p>Cliente:{{venda.cliente.nome}}</p>
+         
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option routerLink="/vendas/add-vendas/{{venda.id}}">
+          <ion-icon slot="start" name="create"></ion-icon>
+          Editar
+        </ion-item-option>
+        <ion-item-option color="secondary" (click)="excluirVenda(venda.id)">
+          <ion-icon slot="start" name="trash"></ion-icon>
+          Deletar
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+</ion-content> 
