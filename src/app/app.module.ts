@@ -13,11 +13,12 @@ import { ClienteService } from './services/domain/cliente.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddClientesPage } from './paginas/clientes/add-clientes/add-clientes.page';
 import { AtendenteService } from './services/domain/atendente.service';
+import { VendaService } from './services/domain/venda.service';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, ReactiveFormsModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },ProdutoService, ClienteService,AtendenteService,AppComponent,],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },ProdutoService, ClienteService,AtendenteService,VendaService,AppComponent,],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
