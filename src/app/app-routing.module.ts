@@ -41,7 +41,7 @@ const routes: Routes = [
   },
   {
     path: 'atendente',
-    loadChildren: () => import('./paginas/atendente/atendente.module').then( m => m.AtendentePageModule)
+    loadChildren: () => import('./paginas/atendentes/atendentes.module').then( m => m.AtendentePageModule)
   },
 
  
