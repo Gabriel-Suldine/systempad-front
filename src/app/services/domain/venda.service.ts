@@ -6,7 +6,7 @@ import { VendaDTO } from "src/app/models/vendaDTO";
 
 @Injectable()
 
-export class vendaService {
+export class VendaService {
     constructor(public http : HttpClient){}
     findAll(): Observable<VendaDTO[]> {
         return this.http.get<VendaDTO[]>(`${API_CONFIG.baseUrl}/venda`);
