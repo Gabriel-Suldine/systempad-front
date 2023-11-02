@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: VendasPage
+  },
+  {
+    path: 'add-vendas',
+    loadChildren: () => import('./add-vendas/add-vendas.module').then( m => m.AddVendasPageModule)
   }
 ];
 
