@@ -11,7 +11,7 @@ import { ClienteService } from 'src/app/services/domain/cliente.service';
 export class ClientesPage implements OnInit {
   cliente!: ClienteDTO[]; 
 
-  constructor(public ClienteService: ClienteService, private navController: NavController) { }
+  constructor(public ClienteService: ClienteService, private navController: NavController) { } 
 
   ionViewDidEnter() {
     this.ClienteService.findAll()

@@ -53,8 +53,8 @@ export class AddClientesPage implements OnInit {
         this.clienteForm = this.formBuilder.group({
           id: [response.id],
           nome: [response.nome,Validators.required],
-          cpf: [response.cpf],//validator não deixa salvar , Validators.required
-          telefone: [response.telefone],//validator não deixa salvar , Validators.required
+          cpf: [response.cpf,Validators.required],
+          telefone: [response.telefone,Validators.required],
           email: [response.email, Validators.required],
           endereco: [response.endereco, Validators.required],
         })

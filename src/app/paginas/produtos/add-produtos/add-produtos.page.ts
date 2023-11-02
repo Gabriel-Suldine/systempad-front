@@ -20,6 +20,8 @@ export class AddProdutosPage implements OnInit {
     private navController: NavController,
     private route: ActivatedRoute, 
     public ProdutoService: ProdutoService) { }
+
+
     submit() {
 
 
@@ -51,8 +53,9 @@ export class AddProdutosPage implements OnInit {
         this.produtoForm = this.formBuilder.group({
           id: [response.id],
           nome: [response.nome,Validators.required],
-          preco: [response.preco],//validator não deixa salvar , Validators.required
-          descição: [response.descricao],//validator não deixa salvar , Validators.required         
+          preco: [response.preco,Validators.required],//validator não deixa salvar , Validators.required
+          descição: [response.descricao,Validators.required],//validator não deixa salvar , Validators.required         
+          imagem: [response.descricao,Validators.required],//validator não deixa salvar , Validators.required         
         })
       })
     } else {
@@ -62,6 +65,7 @@ export class AddProdutosPage implements OnInit {
         nome: ['', Validators.required],
         preco: ['', Validators.required],
         descricao: ['', Validators.required],
+        imagem: ['', Validators.required],
         
       })
     }

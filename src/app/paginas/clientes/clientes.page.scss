@@ -1,12 +1,14 @@
 ion-thumbnail{
-    background-color: aliceblue;
-    width: 60px;
-    height: 60px;
+    width:100px;
+    height: 100px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .imgCliente{
     width: 80px;
-    height: 80px;
+    height: 80px;    
 
 }
 .cardCliente {
