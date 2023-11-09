@@ -1,19 +1,15 @@
 ion-thumbnail{
-    width:100px;
-    height: 100px;
+    width:60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.imgCliente{
-    width: 80px;
-    height: 80px;    
 
 }
-.cardCliente {
-    display: flex;
-    align-items: start;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
+ion-label{
+    h2{
+        font-weight: bold;
+    }
 }

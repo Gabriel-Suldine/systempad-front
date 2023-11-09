@@ -1,0 +1,18 @@
+ion-thumbnail { 
+    width:70px;
+    height:70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        border-radius: 10%;
+    }
+
+}
+
+ion-label{
+    h2{
+        font-weight: bold;
+    }
+}
