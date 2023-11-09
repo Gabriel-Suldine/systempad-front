@@ -1,31 +1,37 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>    
+  <ion-toolbar>
+    <div class="TitleHome">
     <ion-title>SystemPad</ion-title>
+  </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <h1>Home</h1>
+
+
+
   <ion-list>
+    <ion-title>Seja Bem-Vindo</ion-title>
     <ion-button fill="solid" (click)="router('vendas')" expand="block">
-      <ion-icon slot="start" name="cash-outline"></ion-icon>
+      <ion-icon slot="start" name="cash-outline" size="large"></ion-icon>
       Vendas
     </ion-button>
 
     <ion-button fill="solid" (click)="router('clientes')" expand="block">
-      <ion-icon slot="start" name="person-circle"></ion-icon>
+      <ion-icon slot="start" name="person-circle" size="large"></ion-icon>
       Clientes
     </ion-button>
 
     <ion-button fill="solid" (click)="router('produtos')" expand="block">
-      <ion-icon slot="start" name="cube-outline"></ion-icon>
+      <ion-icon slot="start" name="cube-outline" size="large"></ion-icon>
       Produtos
     </ion-button>
 
     <ion-button fill="solid" (click)="router('atendentes')" expand="block">
-      <ion-icon slot="start" name="home"></ion-icon>
+      <ion-icon slot="start" name="home" size="large"></ion-icon>
       Atendentes
     </ion-button>
   
   </ion-list>
+
 </ion-content>
