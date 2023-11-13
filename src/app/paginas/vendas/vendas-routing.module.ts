@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'item-venda',
     loadChildren: () => import('./item-venda/item-venda.module').then( m => m.ItemVendaPageModule)
+  },
+  {
+    path: 'fininalizar-venda',
+    loadChildren: () => import('./fininalizar-venda/fininalizar-venda.module').then( m => m.FininalizarVendaPageModule)
   }
 ];
 
