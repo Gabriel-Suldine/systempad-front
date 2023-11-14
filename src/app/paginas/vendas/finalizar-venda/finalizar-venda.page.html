@@ -1,27 +1,41 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="item-venda"></ion-back-button>
+    </ion-buttons>
     <ion-title>Finalizando</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
   <form>
-  <ion-item>
-    <ion-label position="floating">Nome</ion-label>
-    <ion-input  type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Descricao</ion-label>
-    <ion-input  type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">preço</ion-label>
-    <ion-input  type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">imagem</ion-label>
-    <ion-input  type="text"></ion-input>
-  </ion-item>
- 
+    <h1>Selecione</h1>
+    <ion-item>
+      <ion-label position="floating">Cliente</ion-label>
+      <ion-input  type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Atendente</ion-label>
+      <ion-input  type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Observações</ion-label>
+      <ion-input  type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Forma de Pagamento</ion-label>
+      <ion-select  placeholder="Selecione...">
+        <ion-select-option value="DINHEIRO">Dinheiro</ion-select-option>
+        <ion-select-option value="PIX">PIX</ion-select-option>
+        <ion-select-option value="CARTAODEBITO">Cartão Débito</ion-select-option>
+        <ion-select-option value="CARTAOCREDITO">Cartão Crédito</ion-select-option>
+      </ion-select>
+   </ion-item>
+
+   <ion-button shape="round" expand="block" 
+                padding type="submit" >
+      Finalizar      
+    </ion-button>
 
 </form>
 </ion-content>
