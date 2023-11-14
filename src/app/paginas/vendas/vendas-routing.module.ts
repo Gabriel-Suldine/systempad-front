@@ -13,8 +13,8 @@ const routes: Routes = [
     loadChildren: () => import('./item-venda/item-venda.module').then( m => m.ItemVendaPageModule)
   },
   {
-    path: 'fininalizar-venda',
-    loadChildren: () => import('./fininalizar-venda/fininalizar-venda.module').then( m => m.FininalizarVendaPageModule)
+    path: 'finalizar-venda',
+    loadChildren: () => import('./finalizar-venda/finalizar-venda.module').then( m => m.FinalizarVendaPageModule)
   }
 ];
 
