@@ -18,11 +18,11 @@
     <ion-item-sliding *ngFor="let venda of venda">
       <ion-item>       
         <ion-label>
-          <p>{{venda.id}}</p>        
-          <p>{{venda.preco}}</p>
-          <p>{{venda.pagamento}}</p>
-          <p>Atendente:{{venda.atendente.nome}}</p>
-          <p>Cliente:{{venda.cliente.nome}}</p>
+          <h2>Codigo da Venda: {{venda.id}}</h2>    
+          <p>Valor Total: R$ {{venda.preco}}0,00</p>
+          <p>Forma de Pagamento: {{venda.pagamento}}</p>
+          <p>Atendente: {{venda.atendente.nome}}</p>
+          <p>Cliente: {{venda.cliente.nome}}</p>
          
         </ion-label>
       </ion-item>
