@@ -23,7 +23,7 @@ export class LoginPage implements OnInit {
     await toast.present();
   }
   logar(x: string) {
-    if (this.user.usuario == "" && this.user.senha == "") {
+    if (this.user.usuario === '' && this.user.senha === '') {
       this.nav.navigateForward(x);
     } else {
       this.presentToast('top')

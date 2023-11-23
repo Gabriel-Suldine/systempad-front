@@ -8,11 +8,29 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-item-sliding *ngFor="let produto of produto">
+    <ion-item>
+      <ion-thumbnail slot="start" class="thumb">
+        <img src="{{produto.imagem}}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{produto.nome}}</h2>
+        <p>{{produto.descricao}}</p>
+        <p>Preço: R${{produto.preco}}</p>
+        <p>Código: {{produto.id}}</p>
+      </ion-label>
+    </ion-item>  
+    
+  </ion-item-sliding>
+  <ion-button shape="round" expand="block" (click)="navegacao('/vendas/finalizar-venda')"  padding type="submit">
+    Finalizar
+  </ion-button>
   <ion-fab slot="fixed" vertical="top" horizontal="end" [edge]="true">
     <ion-fab-button routerLink="/vendas/finalizar-venda">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab> 
+  
 
   
 </ion-content> 
