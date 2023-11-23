@@ -16,3 +16,21 @@ ion-title {
     padding-top: 10px;
     font-weight: bold;
 }
+
+
+ion-item {
+    width: 100%;
+    padding-left: 0;
+    ion-icon{
+        width: 30px;
+        height: 30px;
+        padding-right: 5px;
+        color: black;
+    }
+}
+
+ion-button {
+    width: 80%;
+    padding-top: 20px;
+    padding-left: 20%;
+}

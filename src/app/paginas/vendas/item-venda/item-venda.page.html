@@ -14,11 +14,14 @@
         <img src="{{produto.imagem}}">
       </ion-thumbnail>
       <ion-label>
-        <h2>{{produto.nome}}</h2>
-        <p>{{produto.descricao}}</p>
+        <h2 >{{produto.nome}}</h2>
         <p>Preço: R${{produto.preco}}</p>
         <p>Código: {{produto.id}}</p>
       </ion-label>
+      <ion-item>
+        <ion-icon size="small" name="cart-outline"></ion-icon>
+        <ion-input placeholder="QTD" maxlength="3" style="width: 33px;"></ion-input>
+      </ion-item>
     </ion-item>  
     
   </ion-item-sliding>

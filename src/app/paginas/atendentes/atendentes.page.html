@@ -16,10 +16,10 @@
 
   <ion-list>
     <ion-item-sliding *ngFor="let atendente of atendente">
-      <ion-item>      
+      <ion-item>          
         <ion-thumbnail slot="start" class="thumb">
-          <ion-icon name="person" size="large"></ion-icon>   
-        </ion-thumbnail>         
+          <img src="{{atendente.imagem}}">
+        </ion-thumbnail>
         
         <ion-label>
           <h2>Nome: {{atendente.nome}}</h2>
